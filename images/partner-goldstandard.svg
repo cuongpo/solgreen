@@ -1,0 +1,7 @@
+<svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="100" fill="#FFFFFF"/>
+  <circle cx="100" cy="40" r="30" fill="#FFCC00"/>
+  <circle cx="100" cy="40" r="24" fill="#FFFFFF"/>
+  <path d="M100,20 L105,35 L120,35 L110,45 L115,60 L100,50 L85,60 L90,45 L80,35 L95,35 Z" fill="#FFCC00"/>
+  <text x="100" y="85" font-family="Arial" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">Gold Standard</text>
+</svg>

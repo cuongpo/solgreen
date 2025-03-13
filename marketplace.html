@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolGreen Marketplace - Buy and Sell Carbon Credits</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="marketplace-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="nav-container">
+                    <a href="index.html" class="logo">SolGreen</a>
+                    <nav>
+                        <ul class="nav-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#" class="active">Marketplace</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Projects</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="#" class="btn btn-wallet"><i class="fas fa-wallet"></i> Connect Wallet <span class="wallet-badge">Solana</span></a>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Marketplace Hero Section -->
+    <section class="marketplace-hero">
+        <div class="container">
+            <div class="marketplace-hero-content">
+                <h1>Carbon Credit Marketplace</h1>
+                <p>Browse, buy, and retire carbon credits from verified projects worldwide</p>
+                <div class="marketplace-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">435+</span>
+                        <span class="stat-label">Available Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12.6M</span>
+                        <span class="stat-label">Tonnes CO₂ Available</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">$8.50</span>
+                        <span class="stat-label">Avg. Price/Tonne</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketplace Filters -->
+    <section class="marketplace-filters">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="search-box">
+                    <input type="text" placeholder="Search projects...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-options">
+                    <div class="filter-select">
+                        <select id="project-type">
+                            <option value="">Project Type</option>
+                            <option value="forestry">Forestry</option>
+                            <option value="renewable">Renewable Energy</option>
+                            <option value="carbon-removal">Carbon Removal</option>
+                            <option value="methane">Methane Reduction</option>
+                        </select>
+                    </div>
+                    <div class="filter-select">
+                        <select id="certification">
+                            <option value="">Certification</option>
+                            <option value="verra">Verra</option>
+                            <option value="gold-standard">Gold Standard</option>
+                            <option value="puro">Puro.earth</option>
+                            <option value="american">American Carbon Registry</option>
+                        </select>
+                    </div>
+                    <div class="filter-select">
+                        <select id="location">
+                            <option value="">Location</option>
+                            <option value="africa">Africa</option>
+                            <option value="asia">Asia</option>
+                            <option value="europe">Europe</option>
+                            <option value="north-america">North America</option>
+                            <option value="south-america">South America</option>
+                            <option value="oceania">Oceania</option>
+                        </select>
+                    </div>
+                    <div class="filter-select">
+                        <select id="sort-by">
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="filter-toggle-btn">Filters <i class="fas fa-sliders-h"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketplace Listings -->
+    <section class="marketplace-listings">
+        <div class="container">
+            <div class="listings-grid">
+                <!-- Project Card 1 -->
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="images/amazon-project.svg" alt="Amazon Rainforest Conservation">
+                        <div class="listing-badge verra">Verra</div>
+                    </div>
+                    <div class="listing-content">
+                        <div class="listing-header">
+                            <h3>Amazon Rainforest Conservation</h3>
+                            <div class="listing-location">
+                                <i class="fas fa-map-marker-alt"></i> Brazil
+                            </div>
+                        </div>
+                        <div class="listing-details">
+                            <div class="listing-price">
+                                <span class="price-value">$12.50</span>
+                                <span class="price-unit">per tonne</span>
+                            </div>
+                            <div class="listing-available">
+                                <span class="available-value">250,000</span>
+                                <span class="available-unit">tonnes available</span>
+                            </div>
+                        </div>
+                        <div class="listing-tags">
+                            <span class="tag">Forestry</span>
+                            <span class="tag">Biodiversity</span>
+                        </div>
+                        <div class="listing-footer">
+                            <button class="btn btn-secondary view-details-btn">Details</button>
+                            <button class="btn btn-primary buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="images/solar-project.svg" alt="Solar Farm in Kenya">
+                        <div class="listing-badge gold-standard">Gold Standard</div>
+                    </div>
+                    <div class="listing-content">
+                        <div class="listing-header">
+                            <h3>Solar Farm in Kenya</h3>
+                            <div class="listing-location">
+                                <i class="fas fa-map-marker-alt"></i> Kenya
+                            </div>
+                        </div>
+                        <div class="listing-details">
+                            <div class="listing-price">
+                                <span class="price-value">$9.75</span>
+                                <span class="price-unit">per tonne</span>
+                            </div>
+                            <div class="listing-available">
+                                <span class="available-value">120,000</span>
+                                <span class="available-unit">tonnes available</span>
+                            </div>
+                        </div>
+                        <div class="listing-tags">
+                            <span class="tag">Renewable Energy</span>
+                            <span class="tag">Community</span>
+                        </div>
+                        <div class="listing-footer">
+                            <button class="btn btn-secondary view-details-btn">Details</button>
+                            <button class="btn btn-primary buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="images/dac-project.svg" alt="Direct Air Capture">
+                        <div class="listing-badge puro">Puro.earth</div>
+                    </div>
+                    <div class="listing-content">
+                        <div class="listing-header">
+                            <h3>Direct Air Capture (DAC)</h3>
+                            <div class="listing-location">
+                                <i class="fas fa-map-marker-alt"></i> Iceland
+                            </div>
+                        </div>
+                        <div class="listing-details">
+                            <div class="listing-price">
+                                <span class="price-value">$275.00</span>
+                                <span class="price-unit">per tonne</span>
+                            </div>
+                            <div class="listing-available">
+                                <span class="available-value">5,000</span>
+                                <span class="available-unit">tonnes available</span>
+                            </div>
+                        </div>
+                        <div class="listing-tags">
+                            <span class="tag">Carbon Removal</span>
+                            <span class="tag">High Durability</span>
+                        </div>
+                        <div class="listing-footer">
+                            <button class="btn btn-secondary view-details-btn">Details</button>
+                            <button class="btn btn-primary buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="images/mangrove-project.svg" alt="Mangrove Restoration">
+                        <div class="listing-badge verra">Verra</div>
+                    </div>
+                    <div class="listing-content">
+                        <div class="listing-header">
+                            <h3>Mangrove Restoration</h3>
+                            <div class="listing-location">
+                                <i class="fas fa-map-marker-alt"></i> Indonesia
+                            </div>
+                        </div>
+                        <div class="listing-details">
+                            <div class="listing-price">
+                                <span class="price-value">$14.25</span>
+                                <span class="price-unit">per tonne</span>
+                            </div>
+                            <div class="listing-available">
+                                <span class="available-value">85,000</span>
+                                <span class="available-unit">tonnes available</span>
+                            </div>
+                        </div>
+                        <div class="listing-tags">
+                            <span class="tag">Blue Carbon</span>
+                            <span class="tag">Coastal Protection</span>
+                        </div>
+                        <div class="listing-footer">
+                            <button class="btn btn-secondary view-details-btn">Details</button>
+                            <button class="btn btn-primary buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="images/wind-project.svg" alt="Wind Farm Project">
+                        <div class="listing-badge gold-standard">Gold Standard</div>
+                    </div>
+                    <div class="listing-content">
+                        <div class="listing-header">
+                            <h3>Wind Farm Project</h3>
+                            <div class="listing-location">
+                                <i class="fas fa-map-marker-alt"></i> India
+                            </div>
+                        </div>
+                        <div class="listing-details">
+                            <div class="listing-price">
+                                <span class="price-value">$7.85</span>
+                                <span class="price-unit">per tonne</span>
+                            </div>
+                            <div class="listing-available">
+                                <span class="available-value">180,000</span>
+                                <span class="available-unit">tonnes available</span>
+                            </div>
+                        </div>
+                        <div class="listing-tags">
+                            <span class="tag">Renewable Energy</span>
+                            <span class="tag">Rural Development</span>
+                        </div>
+                        <div class="listing-footer">
+                            <button class="btn btn-secondary view-details-btn">Details</button>
+                            <button class="btn btn-primary buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="listing-card">
+                    <div class="listing-image">
+                        <img src="images/biochar-project.svg" alt="Biochar Production">
+                        <div class="listing-badge puro">Puro.earth</div>
+                    </div>
+                    <div class="listing-content">
+                        <div class="listing-header">
+                            <h3>Biochar Production</h3>
+                            <div class="listing-location">
+                                <i class="fas fa-map-marker-alt"></i> United States
+                            </div>
+                        </div>
+                        <div class="listing-details">
+                            <div class="listing-price">
+                                <span class="price-value">$129.00</span>
+                                <span class="price-unit">per tonne</span>
+                            </div>
+                            <div class="listing-available">
+                                <span class="available-value">12,000</span>
+                                <span class="available-unit">tonnes available</span>
+                            </div>
+                        </div>
+                        <div class="listing-tags">
+                            <span class="tag">Carbon Removal</span>
+                            <span class="tag">Agricultural</span>
+                        </div>
+                        <div class="listing-footer">
+                            <button class="btn btn-secondary view-details-btn">Details</button>
+                            <button class="btn btn-primary buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">4</button>
+                <button class="pagination-btn next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Project Detail Modal -->
+    <div class="project-detail-modal" id="project-detail-modal">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <div class="detail-header">
+                    <div class="detail-badge"></div>
+                    <h2 class="detail-title"></h2>
+                    <div class="detail-location"><i class="fas fa-map-marker-alt"></i> <span></span></div>
+                </div>
+                
+                <div class="detail-gallery">
+                    <img src="" alt="Project Image" class="detail-main-image">
+                    <div class="detail-thumbnails">
+                        <img src="" alt="Thumbnail 1" class="thumbnail active">
+                        <img src="" alt="Thumbnail 2" class="thumbnail">
+                        <img src="" alt="Thumbnail 3" class="thumbnail">
+                    </div>
+                </div>
+                
+                <div class="detail-info-container">
+                    <div class="detail-info-column">
+                        <div class="detail-stats">
+                            <div class="stat-group">
+                                <div class="stat-label">Price</div>
+                                <div class="stat-value price-value"></div>
+                            </div>
+                            <div class="stat-group">
+                                <div class="stat-label">Available</div>
+                                <div class="stat-value available-value"></div>
+                            </div>
+                            <div class="stat-group">
+                                <div class="stat-label">Vintage</div>
+                                <div class="stat-value vintage-value"></div>
+                            </div>
+                            <div class="stat-group">
+                                <div class="stat-label">Project Type</div>
+                                <div class="stat-value project-type-value"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-tags"></div>
+                        
+                        <div class="detail-actions">
+                            <button class="btn btn-primary buy-now-btn">Buy Now</button>
+                            <button class="btn btn-secondary add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-info-column">
+                        <div class="detail-description">
+                            <h3>Project Description</h3>
+                            <div class="detail-description-content"></div>
+                        </div>
+                        
+                        <div class="detail-impact">
+                            <h3>Environmental Impact</h3>
+                            <div class="impact-metrics">
+                                <div class="impact-item">
+                                    <div class="impact-icon"><i class="fas fa-tree"></i></div>
+                                    <div class="impact-value trees-planted"></div>
+                                    <div class="impact-label">Trees Planted</div>
+                                </div>
+                                <div class="impact-item">
+                                    <div class="impact-icon"><i class="fas fa-cloud"></i></div>
+                                    <div class="impact-value co2-reduced"></div>
+                                    <div class="impact-label">CO₂ Reduced</div>
+                                </div>
+                                <div class="impact-item">
+                                    <div class="impact-icon"><i class="fas fa-users"></i></div>
+                                    <div class="impact-value communities"></div>
+                                    <div class="impact-label">Communities Supported</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-certification">
+                            <h3>Certification</h3>
+                            <div class="certification-info"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="detail-tabs">
+                    <button class="tab-btn active" data-tab="verification">Verification</button>
+                    <button class="tab-btn" data-tab="documentation">Documentation</button>
+                    <button class="tab-btn" data-tab="recent-activity">Recent Activity</button>
+                </div>
+                
+                <div class="detail-tab-content">
+                    <div class="tab-pane active" id="verification">
+                        <h3>Verification Process</h3>
+                        <p>This project has undergone rigorous verification by independent third-party auditors to ensure it meets all quality standards and delivers the promised carbon reduction benefits.</p>
+                        <div class="verification-steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Initial Assessment</h4>
+                                    <p>Comprehensive evaluation of project methodology and baseline emissions.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>On-site Validation</h4>
+                                    <p>Physical inspection of project site and implementation.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Monitoring Setup</h4>
+                                    <p>Installation of monitoring equipment and protocols.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>Ongoing Verification</h4>
+                                    <p>Regular audits to ensure continued performance and compliance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="documentation">
+                        <h3>Project Documentation</h3>
+                        <div class="document-list">
+                            <a href="#" class="document-item">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Project Design Document (PDD)</span>
+                            </a>
+                            <a href="#" class="document-item">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Validation Report</span>
+                            </a>
+                            <a href="#" class="document-item">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Monitoring Report (2024)</span>
+                            </a>
+                            <a href="#" class="document-item">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Verification Statement</span>
+                            </a>
+                            <a href="#" class="document-item">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Community Impact Assessment</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="recent-activity">
+                        <h3>Recent Trading Activity</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-date">March 10, 2025</div>
+                                <div class="activity-content">
+                                    <div class="activity-type purchase">Purchase</div>
+                                    <div class="activity-details">
+                                        <span class="amount">5,000 tonnes</span> at <span class="price">$12.50</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-date">March 5, 2025</div>
+                                <div class="activity-content">
+                                    <div class="activity-type retirement">Retirement</div>
+                                    <div class="activity-details">
+                                        <span class="amount">10,000 tonnes</span> by <span class="company">EcoTech Inc.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-date">February 28, 2025</div>
+                                <div class="activity-content">
+                                    <div class="activity-type purchase">Purchase</div>
+                                    <div class="activity-details">
+                                        <span class="amount">25,000 tonnes</span> at <span class="price">$12.25</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-date">February 20, 2025</div>
+                                <div class="activity-content">
+                                    <div class="activity-type issuance">Issuance</div>
+                                    <div class="activity-details">
+                                        <span class="amount">50,000 tonnes</span> added to registry
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Join Our Community Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join the SolGreen Community</h2>
+                <p>Connect with buyers, sellers, and project developers in our fast-growing ecosystem.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Connect Wallet</a>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">SolGreen</div>
+                    <p>Building a frictionless carbon market on Solana blockchain.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="#">For Developers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Have questions? Contact our support team for assistance.</p>
+                    <a href="#" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SolGreen. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="marketplace.js"></script>
+</body>
+</html>

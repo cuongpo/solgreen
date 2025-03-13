@@ -1,0 +1,8 @@
+<svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="100" fill="#FFFFFF"/>
+  <circle cx="100" cy="40" r="30" fill="#8BC53F" opacity="0.9"/>
+  <path d="M85,25 Q100,10 115,25 T145,25 M55,25 Q70,10 85,25" stroke="#006838" stroke-width="3" fill="none"/>
+  <path d="M70,40 Q85,25 100,40 T130,40" stroke="#006838" stroke-width="3" fill="none"/>
+  <path d="M85,55 Q100,40 115,55" stroke="#006838" stroke-width="3" fill="none"/>
+  <text x="100" y="85" font-family="Arial" font-size="16" font-weight="bold" fill="#006838" text-anchor="middle">Puro.earth</text>
+</svg>
